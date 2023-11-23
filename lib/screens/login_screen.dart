@@ -69,12 +69,12 @@ class _LoginScreenState extends State<LoginScreen> {
         }));
       } else {
         setState(() {
-          _error = 'Wrong Email or Password';
+          _error = 'Email atau Password yang di masukan salah!';
         });
       }
     } catch (e) {
       setState(() {
-        _error = 'Login Failed';
+        _error = 'Login Gagal';
       });
     }
 
@@ -98,7 +98,8 @@ class _LoginScreenState extends State<LoginScreen> {
       key: scaffoldMessengerKey,
       child: Scaffold(
           appBar: AppBar(
-            title: const Text("Sign In"),
+            title: const Text("Login"),
+             backgroundColor: primaryColor,
           ),
           body: SafeArea(
             child: SizedBox(
@@ -111,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       SizedBox(height: SizeConfig.screenHeight * 0.04),
                       const Text(
-                        "Welcome Back",
+                        "Selamat Datang!",
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 28,
@@ -119,7 +120,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       const Text(
-                        "Sign in with your email and password  \nor continue with social media",
+                        "Silahkan login untuk masuk ke aplikasi ini!",
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(height: SizeConfig.screenHeight * 0.08),
@@ -142,12 +143,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                     });
                                   },
                                 ),
-                                const Text("Remember me"),
+                                const Text("Ingat Saya"),
                                 const Spacer(),
                                 GestureDetector(
                                   onTap: () {},
                                   child: const Text(
-                                    "Forgot Password",
+                                    "Lupa Password",
                                     style: TextStyle(
                                         decoration: TextDecoration.underline),
                                   ),
@@ -157,7 +158,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             FormError(errors: errors),
                             SizedBox(height: getProportionateScreenHeight(30)),
                             DefaultButton(
-                              text: "Continue",
+                              text: "Login",
                               press: () {
                                 if (_formKey.currentState!.validate()) {
                                   _formKey.currentState!.save();
@@ -192,14 +193,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "Don’t have an account? ",
+                            "Tidak Punya Akun? ",
                             style: TextStyle(
                                 fontSize: getProportionateScreenWidth(16)),
                           ),
                           GestureDetector(
                             onTap: () {},
                             child: Text(
-                              "Sign Up",
+                              "Buat Akun",
                               style: TextStyle(
                                   fontSize: getProportionateScreenWidth(16),
                                   color: primaryColor),
@@ -239,8 +240,8 @@ class _LoginScreenState extends State<LoginScreen> {
         return null;
       },
       decoration: const InputDecoration(
-        labelText: "Password",
-        hintText: "Enter your password",
+        labelText: "",
+        hintText: "Masukan Password",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
@@ -270,8 +271,8 @@ class _LoginScreenState extends State<LoginScreen> {
         return null;
       },
       decoration: const InputDecoration(
-        labelText: "Email",
-        hintText: "Enter your email",
+        labelText: "",
+        hintText: "Masukan Email",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
       ),

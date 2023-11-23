@@ -18,14 +18,6 @@ class _HomeScreenState extends State<HomeScreen> {
       "text": "Welcome to The Jhons Cianjur App",
       "image": "assets/images/splash_1.png"
     },
-    {
-      "text": "Anda Bisa Menikmati Berbagai \nWahana Lainnya",
-      "image": "assets/images/splash_2.png"
-    },
-    {
-      "text": "Silahkan Kunjungi App Ini \nEnjoy",
-      "image": "assets/images/splash_3.png"
-    },
   ];
 
   @override
@@ -99,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     const Spacer(flex: 3),
                     DefaultButton(
-                      text: "Continue",
+                      text: "Lanjutkan",
                       press: () {
                         Navigator.push(
                           context,

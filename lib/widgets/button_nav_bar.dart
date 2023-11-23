@@ -50,10 +50,6 @@ class ButtonNavBar extends StatelessWidget {
                         builder: (context) => const DashboardScreen())),
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/message.svg"),
-                onPressed: () {},
-              ),
-              IconButton(
                   icon: SvgPicture.asset(
                     "assets/icons/account.svg",
                     color: MenuState.profile == selectedMenu

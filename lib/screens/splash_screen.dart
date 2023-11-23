@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
             width: 300,
           ),
           const Text(
-            'Wisata App',
+            '',
             style: TextStyle(
               fontSize: 35,
               fontWeight: FontWeight.bold,
@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
       splashIconSize: 400,
       splashTransition: SplashTransition.fadeTransition,
       duration: 2000,
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.purple,
       nextScreen: const HomeScreen(),
     );
   }

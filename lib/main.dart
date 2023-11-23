@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wisata_app/screens/login_success_screen.dart';
 import 'package:wisata_app/screens/splash_screen.dart';
 
 void main() {

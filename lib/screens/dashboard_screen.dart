@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wisata_app/helper/session_manager.dart';
 import 'package:wisata_app/screens/main_screen.dart';
+import 'package:wisata_app/screens/news_screen.dart';
 import 'package:wisata_app/utils/contants.dart';
 import 'package:wisata_app/widgets/button_nav_bar.dart';
 import 'package:wisata_app/widgets/category_card.dart';
@@ -20,14 +21,14 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: const ButtonNavBar(selectedMenu: MenuState.home),
       body: Stack(
-        children: <Widget>[
+        children:[
           Container(
-            height: size.height * .45,
+            height: size.height * .90,
             decoration: const BoxDecoration(
               color: bgLightColor,
               image: DecorationImage(
                 alignment: Alignment.centerLeft,
-                image: AssetImage("assets/images/bg-dashboard.png"),
+                image: AssetImage(""),
               ),
             ),
           ),
@@ -56,7 +57,7 @@ class DashboardScreen extends StatelessWidget {
                         fontSize: 35,
                         color: textLightColor,
                       )),
-                  SizedBox(height: size.height * .12),
+                  SizedBox(height: size.height * .01),
                   SizedBox(height: size.height * .03),
                   Expanded(
                     child: GridView.count(
@@ -66,7 +67,7 @@ class DashboardScreen extends StatelessWidget {
                       mainAxisSpacing: 20,
                       children: <Widget>[
                         CategoryCard(
-                          title: "Vacation",
+                          title: "Fasilitas",
                           imgSrc: "assets/icons/vacation.png",
                           press: () {
                             Navigator.push(context,
@@ -76,18 +77,18 @@ class DashboardScreen extends StatelessWidget {
                           },
                         ),
                         CategoryCard(
-                          title: "News",
+                          title: "Berita",
                           imgSrc: "assets/icons/news.png",
-                          press: () {},
+                          press: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return NewsPage();
+                            }));
+                          },
                         ),
                         CategoryCard(
                           title: "Ticket",
                           imgSrc: "assets/icons/ticket.png",
-                          press: () {},
-                        ),
-                        CategoryCard(
-                          title: "Lodging",
-                          imgSrc: "assets/icons/lodging.png",
                           press: () {},
                         ),
                       ],

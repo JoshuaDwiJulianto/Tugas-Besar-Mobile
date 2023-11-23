@@ -10,7 +10,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Vacation'),
+        title: const Text('Fasilitas'),
         backgroundColor: primaryColor,
       ),
       body: ListView.builder(
@@ -27,11 +27,11 @@ class MainScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Expanded(
-                    flex: 1,
+                    flex: 3,
                     child: Image.asset(place.imageAsset),
                   ),
                   Expanded(
-                    flex: 2,
+                    flex: 4,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
